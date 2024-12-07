@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello from django file </h1>
+    {% comment %} <!-- <h1>example of variable type 1 : key name is {{name}}</h1> -->
+     <h1>example of variavle type 2:</h1>
+     <h1>name : {{name}}</h1> {% endcomment %}
+
+     {% comment %} <h1>example of filter :</h1>
+     <h1>name : {{name|upper}}</h1> {% endcomment %}
+
+     {% comment %} <h1>example of date and time  :</h1>
+     <h1>date and time  : {{dt}}</h1>
+     <h1>date and time  : {{dt|date}}</h1>
+     <h1>date and time  : {{dt|date:'D d M Y'}}</h1>
+     <h1>date and time  : {{dt|time}}</h1> {% endcomment %}
+
+     {% comment %} <h1>if tag </h1>
+     {%if dt <= 100 %}
+     <h1>value of dt is {{dt}}</h1>
+     {% endif %} {% endcomment %}
+
+     {% comment %} <h1>elif tag </h1>
+     {%if var|length >= 4 %}
+     <p>{{var}} </p>
+     {% elif dt %}
+     <p>{{dt}} </p>
+     {% else %}
+     <p>wrong value </p>
+     {%endif%} {% endcomment %}
+     
+     <h1>for loop </h1>
+     <ul>
+        {%for name in names reversed %}
+        <li>{{name}}</li>
+        {% endfor %}
+     </ul>
+       
+
+
+
+</body>
+</html>
