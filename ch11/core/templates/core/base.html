@@ -1,0 +1,22 @@
+{% comment %} this is the base file that wil be inherited by other template files  {% endcomment %}
+{% comment %} {%block title %} {%endblock title %} this block is used where we can have diff content as needed and title is block name {% endcomment %}
+{% comment %} {% extends "base.html" %} extends is used to inherit base file  {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title %} {%endblock title %}</title>
+</head>
+<body>
+    <ul>
+        <li>home</li>
+        <li>django</li>
+        <li>python</li>
+    </ul>
+    {% block hero %}{% endblock hero %}
+    <h1>{%block content  %} {%endblock content  %}</h1>
+    {% block footer %}this is default footer {% endblock footer %}
+
+</body>
+</html>

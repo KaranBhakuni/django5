@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+home
+{% endblock title %}
+{% block hero %} hero section {% endblock hero %}
+{% block content %}
+home page 
+{% endblock content %}
+{% comment %} {% block footer %}this is overriden footer in home {% endblock footer %} {% endcomment %}
+{% block footer %}{{block.super}} and with this new custom footer {% endblock footer %}
+
